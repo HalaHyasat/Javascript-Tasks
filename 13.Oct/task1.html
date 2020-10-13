@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+
+
+    <script>
+        var subject = ["Math", "English", "Arabic", "Bio", "Computer", "Religion"];
+        const a = 6;
+        var sum = 0;
+
+        name = window.prompt("Enter your Name");
+        for (var i = 0; i < a; i++) {
+            subject[i] = window.prompt("Enter your mark in " + subject[i] + " 'mark of 100'");
+            sum = sum + parseInt(subject[i]);
+        }
+        var avg = sum / a;
+
+
+        if (90 < avg && avg < 100) {
+            console.log("Excellent");
+        } else if (80 < avg && avg < 90) {
+            console.log("very good");
+        } else if (70 < avg && avg < 80) {
+            console.log("good");
+        } else if (60 < avg && avg < 70) {
+            console.log("average");
+        } else if (50 < avg && avg < 60) {
+            console.log("Pass");
+        }
+    </script>
+</body>
+
+</html>
