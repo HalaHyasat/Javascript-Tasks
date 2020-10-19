@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-size: 20px;
+    }
+
+
+    input {
+      width: 100%;
+      border: 1px solid #555;
+    }
+
+
+    form {
+      margin-left: 35%;
+      margin-top: 2rem;
+      grid-gap: 20px;
+      border-radius: 2rem;
+      width: 35%;
+      background-color: gray;
+      border: 1px solid rgb(158, 154, 154);
+    }
+
+
+    button,
+    input {
+      padding: 1rem;
+    }
+
+    button {
+      color: #ddd;
+      background: #555;
+      width: 50%;
+      border: none;
+      border-radius: 2rem;
+      margin: 0 0 0 17rem;
+    }
+
+    button:hover {
+
+      background: #ddd;
+      color: #555;
+      outline: 0;
+      cursor: pointer;
+    }
+
+    p {
+      color: #ddd;
+      margin: 1.5rem;
+    }
+
+    a {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+
+    <p style="text-align: center; font-size: 40px;">
+      Creat Account
+    </p>
+    <hr style="width: 100%;">
+
+    <p>
+      <input class="fa fa-user" placeholder="&#xf007;   Name" style="border-radius: 2rem; font-size: 24px;" pattern="\b[A-Z][a-z]* \b[A-Z][a-z]">
+    </p>
+
+    <p>
+      <input class="fa fa-phone" placeholder="&#xf095;   Phone Number" style="border-radius: 2rem; font-size: 24px;" pattern="\d{3}[-]\d{3}[-]\d{4}">
+    </p>
+
+    <p>
+      <input class="fa fa-envelope" placeholder="&#xf0e0;   Email" style="border-radius: 2rem; font-size: 24px;" pattern=".+@email\.com">
+    </p>
+    <p>
+      <input type="password" class="fa fa-lock" placeholder="&#xf023;   password" style="border-radius: 2rem; font-size: 24px;" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W)\w">
+    </p>
+
+    <p>
+
+
+      <input type="checkbox" id="myCheck" style="width: 30px;" onclick="Checked(this)" />
+      <label for="myCheck"> I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy
+          Policy</a></label>
+    </p>
+
+    <p>
+      <button style="font-size: 24px;" type="submit" id="creat-account" disabled>Creat Account</button>
+    </p>
+
+  </form>
+
+  <script>
+    function Checked(termsCheckBox) {
+      if (termsCheckBox.checked) {
+        document.getElementById("creat-account").disabled = false;
+      } else {
+        document.getElementById("creat-account").disabled = true;
+      }
+    }
+  </script>
+</body>
+
+</html>
