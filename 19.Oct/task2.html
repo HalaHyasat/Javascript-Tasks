@@ -6,6 +6,88 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <script>
+
+class Animal {
+  constructor(name) {
+    this.speed = 0;
+    this.name = name;
+  }
+  run(speed) {
+    this.speed = speed;
+    console.log(`${this.name} runs with speed ${this.speed}.`);
+  }
+  stop() {
+    this.speed = 0;
+    console.log(`${this.name} stands still.`);
+  }
+}
+
+
+class Rabbit extends Animal {
+  hide() {
+    console.log(`${this.name} hides!`);
+  }
+}
+
+let rabbit = new Rabbit("White Rabbit");
+
+rabbit.run(5);
+rabbit.hide(); 
+
+
+
+class Person {
+  constructor(first, second, age, gender, Job) {
+    this.name = {
+      first,
+      second
+    };
+    this.age = age;
+    this.gender = gender;
+    this.Job = Job;
+  }
+
+  greeting() {
+    console.log(`Hi! I'm ${this.name.first + ` ` + this.name.second +` I'm ` + this.Job}`);
+  };
+}
+
+let Girl = new Person('Hanan', 'Ahmad', 25, 'Female', ["Programmer"]);
+Girl.greeting();
+
+
+class Car {
+ 
+ constructor (model, year) {
+   this.model = model;
+   this.year = year;
+ }
+
+ getModel () {
+   return this.model;
+ }
+
+ getYear () {
+   return this.year;
+ }
+
+}
+class Ford extends Car {
+
+ constructor (model) {
+   super(model, 2020);
+ }
+
+ getModel () {
+   return 'It is a car: ' + super.getModel();
+ }
+
+}
+let car = new Ford('Ford');
+console.log(car.getModel() + " " + car.getYear());
+
+        </script>
 </body>
 </html>
