@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(id, name, age) {
+          this.id = id;
+          this.name = name;
+          this.age = age;
+          this.Greeting = function () {
+            return `Hello ${this.name}`;
+          };
+        }
+      }
+      class Teacher extends Person {
+        constructor(id, name, age) {
+          super(id, name, age);
+        }
+      }
+
+      let person1 = new Person("08A", "Hala", 22);
+      console.log(person1);
+      let person2 = new Person("24A", "Sondos", 20);
+      console.log(person2);
+      let teacher1 = new Teacher(5678, "hamda", 37);
+      console.log(teacher1);
+      const Sobhi = Teacher.Greeting;
+      console.log(Sobhi);
+
+      class Car {
+        constructor(id, type, year) {
+          this.id = id;
+          this.type = type;
+          this.year = year;
+          this.start = function () {
+            return `The car is running`;
+          };
+        }
+      }
+
+      let car1 = new Car(76244578, "Ford", 2020);
+      console.log(car1);
+      let car2 = new Car(76277095, "Land Cruiser", 2020);
+      console.log(car2);
+
+      class Animal {
+        constructor(id, name, isPet) {
+          this.id = id;
+          this.name = name;
+          this.isPet = Boolean;
+
+          this.homeAnimal = function () {
+            if (isPet == true) {
+              return this.Object;
+            }
+          };
+        }
+      }
+
+      let animal1 = new Animal(34, "Cat", "true");
+      console.log(animal1);
+
+      let animal2 = new Animal(87, "Lion", "false");
+      console.log(animal2);
+    </script>
+  </body>
+</html>
