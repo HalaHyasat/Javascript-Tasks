@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form>
+        <h1>Web Storage Exercise</h1>
+        <input placeholder="Key input" id="keyInput">
+        <input placeholder="Value input" id="valueInput">
+        <button onclick="saveLocal()">Save to Local Storage</button>
+        <button onclick="saveSession()">Save to Session Storage</button>
+        <button onclick="clear()" style="background-color: brown;">Clear Data</button>
+    </form>
+
+    <script>
+        function saveLocal() {
+            var keyInput = document.getElementById("keyInput");
+            localStorage.setItem("keyIpnut", keyInput.value);
+
+            var valueInput = document.getElementById("valueInput");
+            window.localStorage.setItem("valueInput", valueInput.value);
+        }
+
+
+        function saveSession() {
+
+            var keyInput = document.getElementById("keyInput");
+            sessionStorage.setItem("keyInput", keyInput.value);
+
+            var valueInput = document.getElementById("valueInput");
+            window.sessionStorage.setItem("valueInput", valueInput.value);
+
+        }
+
+        function clear() {
+            window.localStorage.clear();
+        }
+    </script>
+
+</body>
+
+</html>

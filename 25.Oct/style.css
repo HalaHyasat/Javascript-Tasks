@@ -1,0 +1,57 @@
+form {
+    background-color: antiquewhite;
+    padding: 1rem;
+    color: cadetblue;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}
+
+input {
+    width: 50%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: block;
+    margin-left: 25%;
+    border: cadetblue 1px solid;
+    outline: none;
+}
+
+button {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4),
+        0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4),
+        0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4),
+        0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    position: relative;
+    cursor: pointer;
+
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    width: 30%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    margin-top: 3rem;
+    background-color: cadetblue;
+    opacity: 0.9;
+    color: cornsilk;
+    margin-bottom: 2rem;
+}
+
+button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
